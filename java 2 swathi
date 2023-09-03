@@ -1,0 +1,149 @@
+//car owner
+import java.util.*;
+class Owner
+{
+    private String name;       // public -used to access anywhere in program
+    private String city;
+    private String profession;
+    public Owner(String name,String city,String profession)
+    {
+        this.name=name;
+        this.city=city;
+        this.profession=profession;
+    }
+   public String toString()
+    {
+        return "Owner[NAME is:"+ name + "CITY:"+ city+"PROFESSION:"+profession+"]";
+    }
+}
+class Car
+{
+  private int regno;
+  private String colour;
+  private int  noofseats;
+  private String brand;
+  private int model;
+  private String owner;
+  public Car(int regno,String colour,int noofseats,String brand,int model,String owner)
+  {
+      this.regno=regno;
+      this.colour=colour;
+      this.noofseats=noofseats;
+      this.brand=brand;
+      this.model=model;
+      this.owner=owner;
+  }
+   public int getRegno()
+    {
+        return regno;
+    }
+      public String getColour()
+    {
+        return colour;
+    }
+     public int getNoofseats()
+    {
+        return noofseats;
+    }
+     public String getBrand()
+    {
+        return brand;
+    }
+     public  int getModel()
+    {
+        return model;
+    }
+    public String getOwner()
+    {
+        return owner;
+    }
+
+  public String toString()
+    {
+        return "Car[REGISTATIONNO is:"+ regno+ "COLOUR is:"+ colour+ "NOOFSEATS IS:"+ noofseats + "BRAND is:"+ brand + "MODEL is:"+ model +"OWNER is:"+owner+"]";
+    }
+}
+class Main{
+ public static void Main(String[] args)
+    {
+        Owner carowner1 =new Owner("raja","madurai","teacher");
+        Owner carowner2 =new Owner("karthick","coimbatore","doctor");
+        Owner carowner3 =new Owner("rani","theni","doctor");
+        Owner carowner4 =new Owner("hari","madurai"," softwareengineer");
+        Owner carowner5 =new Owner("keerthi","chennai","housewife");
+       
+        Car car1=new Car(123,"red",4,"ford",1453,"raja");
+        Car car2=new Car(456,"blue",5,"toyota",7890,"karthick");
+        Car car3=new Car(617,"silver",7,"honda",7888,"rani");
+        Car car4=new Car(973,"black",2,"chevrolet",2606,"hari");
+        Car car5=new Car(378,"white",5,"BMW",9067,"keerthi");
+        System.out.println("" + car1 +""+car2+ "" +car3+" " +car4+ ""+car5);
+    }
+}
+//employee details
+class Employee {
+    private String name;
+    private int id;
+    private int age;
+    private String designation;
+    private String department;
+    private double salary;
+
+    public Employee(String name, int id, int age, String designation, String department, double salary) {
+        this.name = name;
+        this.id = id;
+        this.age = age;
+        this.designation = designation;
+        this.department = department;
+        this.salary = salary;
+    }
+
+    public void displayDetails() {
+        System.out.println("Name: " + name);
+        System.out.println("Designation: " + designation);
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee emp1 = new Employee("John", 1, 30, "Manager", "CSE", 15000);
+        Employee emp2 = new Employee("Sarah", 2, 25, "Developer", "IT", 12000);
+        Employee emp3 = new Employee("Mike", 3, 35, "Analyst", "CSE", 18000);
+        Employee emp4 = new Employee("Emily", 4, 28, "Designer", "Marketing", 9000);
+        Employee emp5 = new Employee("David", 5, 32, "Engineer", "CSE", 11000);
+
+        emp1.displayDetails();
+        emp2.displayDetails();
+        emp3.displayDetails();
+        emp4.displayDetails();
+        emp5.displayDetails();
+
+        System.out.println("Employees in CSE department:");
+        if (emp1.getDepartment().equals("CSE")) {
+            System.out.println(emp1.getName());
+        }
+        if (emp3.getDepartment().equals("CSE")) {
+            System.out.println(emp3.getName());
+        }
+        if (emp5.getDepartment().equals("CSE")) {
+            System.out.println(emp5.getName());
+        }
+
+        System.out.println("Employees with salary above 10000:");
+        if (emp1.getSalary() > 10000) {
+            System.out.println(emp1.getName());
+        }
+        if (emp3.getSalary() > 10000)
+    {
+        System.out.println(emp3.getName());
+   }
+}
+}
